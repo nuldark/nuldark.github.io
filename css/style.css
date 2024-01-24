@@ -1,0 +1,257 @@
+.light-theme {
+  --background-primary: #FFFBFF;
+  --text-primary: #1A1B1E;
+}
+
+.dark-theme {
+  --background-primary: #1A1B1E;
+  --text-primary: #FFFBFF;
+}
+
+:root {
+  --ff-primary: Optimistic Text, -apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --ff-secondary: Merriweather, serif;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fc-yellow: #FFC93A;
+  --fc-red: #DB3A34;
+  --fc-light-dark: #2E2F2F;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  tab-size: 4;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+body {
+  color: var(--text-primary);
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-primary);
+  font-size: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+}
+
+.header {
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .brand {
+  color: var(--fc-yellow);
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .header {
+    flex-direction: row;
+  }
+}
+.header > .container {
+  align-items: center;
+  display: flex;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+#hamburger-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-primary);
+  margin: 6px 0;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+.mobile-nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mobile-nav li {
+  background-color: var(--fc-light-dark);
+  width: 100%;
+  margin-bottom: 10px;
+}
+.mobile-nav a:hover {
+  color: var(--fc-red);
+  text-decoration: underline;
+}
+
+.mobile-nav--open {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 600px) {
+  #hamburger-icon {
+    display: block;
+  }
+}
+.navigation {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+}
+.navigation a {
+  padding: 0 14px;
+  color: var(--text-primary);
+}
+.navigation a:hover, .navigation a:active, .navigation a:focus, .navigation a:focus-within {
+  color: var(--fc-red);
+  text-decoration: none;
+}
+
+.content .hero-section {
+  text-align: left;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 100px 40px 40px;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .content .hero-section {
+    padding: 200px 40px 40px;
+  }
+}
+.content .hero-section h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  padding: 0.5rem;
+}
+.content .hero-section h2 span {
+  color: var(--fc-yellow);
+}
+@media (min-width: 768px) {
+  .content .hero-section h2 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .content .hero-section h2 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1440px) {
+  .content .hero-section h2 {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+@use "../abstract" as *;
+
+:root {
+  @each $key, $value in $font-families {
+    --ff-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-sizes {
+    --fs-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-weights {
+    --fw-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-color {
+    --fc-#{$key}: #{$value};
+  }
+}

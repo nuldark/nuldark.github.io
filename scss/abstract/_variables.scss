@@ -1,0 +1,38 @@
+$-ff-roboto: Optimistic Text, -apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+$-ff-merriweather: "Merriweather", serif;
+
+$container-max-width: 70rem;
+$container-padding-x: 2rem;
+
+$breakpoints: (
+        sm: 30em,
+        md: 50em,
+        lg: 75em,
+);
+
+$font-families: (
+        "primary": $-ff-roboto,
+        "secondary": $-ff-merriweather,
+);
+
+$font-sizes: (
+        "300": 0.875rem,
+        "400": 1rem,
+        "500": 1.25rem,
+        "600": 1.5rem,
+        "700": 2rem,
+        "800": 2.5rem,
+        "900": 3.5rem,
+);
+
+$font-weights: (
+        "light": 300,
+        "regular": 400,
+        "bold": 700,
+);
+
+$font-color: (
+        "yellow": "#FFC93A",
+        "red": "#DB3A34",
+        "light-dark": "#2E2F2F"
+)

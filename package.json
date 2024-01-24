@@ -1,0 +1,24 @@
+{
+  "name": "nulldark.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve",
+    "sass:watch": "sass --watch scss/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nulldark/nulldark.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nulldark/nulldark.github.io/issues"
+  },
+  "homepage": "https://github.com/nulldark/nulldark.github.io#readme",
+  "dependencies": {
+    "sass": "^1.70.0",
+    "serve": "^14.2.1"
+  }
+}

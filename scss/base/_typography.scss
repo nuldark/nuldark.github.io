@@ -1,0 +1,9 @@
+@use "../abstract" as *;
+
+body {
+  color: var(--text-primary);
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-primary);
+  font-size: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+}

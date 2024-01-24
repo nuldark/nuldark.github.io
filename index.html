@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dominik Szamburski | Software Engineer</title>
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Dominik Szamburski">
+    <meta name="description" content="Inspiring software engineer specializing as a backend engineer.">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <meta name="theme-color" content="#fafafa">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-theme">
+<header class="header">
+    <h2 class="brand">nulldark</h2>
+
+    <div class="container">
+        <nav class="navigation">
+            <a href="https://github.com/bytebits9">github</a>
+            <a href="https://www.linkedin.com/in/dominik-szamburski-a1768017a/">linkedin</a>
+        </nav>
+    </div>
+
+    <div id="hamburger-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <ul class="mobile-nav">
+            <li><a href="https://github.com/nulldark">github</a></li>
+            <li><a href="https://www.linkedin.com/in/dominik-szamburski-a1768017a/">linkedin</a></li>
+        </ul>
+    </div>
+</header>
+
+<main role="main" class="content">
+    <section class="hero-section">
+        <h2>Hello there,</h2>
+        <h2>I'm Dominik - <span>software engineer</span></h2>
+        <h2>based in Poland</h2>
+    </section>
+</main>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        document.querySelector('#hamburger-icon').addEventListener('click', () => {
+            document.querySelector('.mobile-nav').classList.toggle('mobile-nav--open')
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
